@@ -32,14 +32,14 @@ body{
     color: var(--secondary);
 }
 
-body.dark{
+/* body.dark{
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
-}
+} */
 
 /* ===== Sidebar ===== */
  .sidebar{
@@ -51,7 +51,8 @@ body.dark{
     padding: 10px 14px;
     background: var(--primary);
     transition: var(--tran-05);
-    z-index: 100;  
+    z-index: 100;
+    border-radius: 0 35px 35px 0;  
 }
 .sidebar.close{
     width: 88px;
@@ -84,7 +85,7 @@ body.dark{
 
 .sidebar .text,
 .sidebar .icon{
-    color: var(--text-color);
+    color: var(--secondary);
     transition: var(--tran-03);
 }
 
@@ -152,9 +153,9 @@ header .image-text .profession{
     transition: var(--tran-05);
 }
 
-body.dark .sidebar header .toggle{
+/* body.dark .sidebar header .toggle{
     color: var(--text-color);
-}
+} */
 
 .sidebar.close .toggle{
     transform: translateY(-50%) rotate(0deg);
@@ -165,7 +166,7 @@ body.dark .sidebar header .toggle{
 }
 
 .sidebar li.search-box{
-    border-radius: 6px;
+    border-radius: 21px;
     background-color: var(--secondary);
     cursor: pointer;
     transition: var(--tran-05);
@@ -178,11 +179,20 @@ body.dark .sidebar header .toggle{
     border: none;
     background-color: var(--secondary);
     color: var(--text-color);
-    border-radius: 6px;
+    border-radius: 21px;
     font-size: 17px;
     font-weight: 500;
     transition: var(--tran-05);
 }
+
+::placeholder {
+    color: var(--primary);
+}
+
+.sidebar li.search-box .icon {
+    color: var(--primary);
+}
+
 .sidebar li a{
     list-style: none;
     height: 100%;
@@ -191,9 +201,10 @@ body.dark .sidebar header .toggle{
     align-items: center;
     height: 100%;
     width: 100%;
-    border-radius: 6px;
+    border-radius: 21px;
     text-decoration: none;
     transition: var(--tran-03);
+    color: var(--secondary);
 }
 
 .sidebar li a:hover{
@@ -203,10 +214,10 @@ body.dark .sidebar header .toggle{
 .sidebar li a:hover .text{
     color: var(--secondary);
 }
-body.dark .sidebar li a:hover .icon,
+/* body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
     color: var(--text-color);
-}
+} */
 
 .sidebar .menu-bar{
     height: calc(100% - 55px);
@@ -218,8 +229,8 @@ body.dark .sidebar li a:hover .text{
 .menu-bar::-webkit-scrollbar{
     display: none;
 }
-.sidebar .menu-bar .mode{
-    border-radius: 6px;
+/* .sidebar .menu-bar .mode{
+    border-radius: 21px;
     background-color: var(--secondary);
     position: relative;
     transition: var(--tran-05);
@@ -274,11 +285,11 @@ body.dark .mode .sun-moon i.moon{
     transform: translateY(-50%);
     background-color: var(--primary);
     transition: var(--tran-04);
-}
+} */
 
-body.dark .switch::before{
+/* body.dark .switch::before{
     left: 20px;
-}
+} */
 
 .home{
     position: absolute;
@@ -287,14 +298,19 @@ body.dark .switch::before{
     left: 250px;
     height: 100vh;
     width: calc(100% - 250px);
-    background-color: var(--body-color);
+    background-color: var(--secondary);
     transition: var(--tran-05);
 }
-.home .text{
+.home .title{
     font-size: 30px;
-    font-weight: 500;
-    color: var(--text-color);
-    padding: 12px 60px;
+    font-weight: bold;
+    color: var(--primary);
+    padding: 70px 0 0 70px;
+}
+
+.home .subtitle {
+    font-size: ;
+    padding: 0 0 14px 70px;
 }
 
 .sidebar.close ~ .home{
@@ -302,6 +318,42 @@ body.dark .switch::before{
     height: 100vh;
     width: calc(100% - 78px);
 }
-body.dark .home .text{
+/* body.dark .home .text{
     color: var(--text-color);
+} */
+
+.home .input-form-row {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: row;
+}
+
+.home .input-form-row .input-contain {
+    display: flex;
+    flex-direction: column;
+    margin-left: 21px;
+}
+
+.home .input-form-row .input-contain .input-barang {
+    display: flex;
+    flex-direction: column;
+}
+
+.home .input-form-row .input-contain .input-barang .input-field {
+    border-radius: 21px;
+    background-color: var(--secondary);
+    cursor: pointer;
+    padding: 3px 6px;
+}
+
+.home input {
+    max-height: 150%;
+    max-width: 250%;
+    padding: 7px 14px;
+    border: var(--primary) solid;
+    background-color: var(--secondary);
+    color: var(--text-color);
+    border-radius: 21px;
+    font-size: 17px;
+    font-weight: 500;
 }
