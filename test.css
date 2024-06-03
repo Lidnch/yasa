@@ -322,31 +322,43 @@ body.dark .mode .sun-moon i.moon{
     color: var(--text-color);
 } */
 
+.home .input-form-row .input-name {
+    font-size: 17px;
+}
+
 .home .input-form-row {
     margin-left: 70px;
     display: flex;
     flex-direction: row;
 }
 
-.home .input-form-row .input-contain {
+.home .input-form-row .input-contain-list {
     display: flex;
     flex-direction: column;
     margin-left: 21px;
 }
 
-.home .input-form-row .input-contain .input-barang {
+.home .input-form-row .input-contain-list .input-barang-list {
     display: flex;
     flex-direction: column;
 }
 
-.home .input-form-row .input-contain .input-barang .input-field {
+.home .input-form-row .input-contain-list .input-barang-list .input-field-list {
     border-radius: 21px;
     background-color: var(--secondary);
     cursor: pointer;
-    padding: 3px 6px;
+    padding: 1px 2px;
 }
 
-.home input {
+.home .input-contain {
+    margin-left: 21px;
+}
+
+.home .btn-container-row {
+    margin-left: 70px;
+}
+
+.home input[type=text], input[type=number] {
     max-height: 150%;
     max-width: 250%;
     padding: 7px 14px;
@@ -357,3 +369,26 @@ body.dark .mode .sun-moon i.moon{
     font-size: 17px;
     font-weight: 500;
 }
+
+.home input[type=submit] {
+    max-height: 250%;
+    max-width: 250%;
+    padding: 7px 14px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--secondary);
+    background-color: var(--primary);
+    border-radius: 21px;
+}
+
+.home input[type=reset] {
+    max-height: 250%;
+    max-width: 250%;
+    padding: 7px 14px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--secondary);
+    background-color: var(--accent);
+    border-radius: 21px;
