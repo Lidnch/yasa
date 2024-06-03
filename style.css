@@ -15,58 +15,93 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 200vh;
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    gap: 2rem;
 }
 
 nav {
-    position: fixed;
-    background-color: var(--primary);
+    position: sticky;
+    max-height: 100vh;
     top: 0;
     left: 0;
-    bottom: 0;
+    background-color: var(--primary);
     padding-top: 21px;
+    border-radius: 0 3vw 3vw 0;
 }
 
 .navbar-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    align-items: center;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-logo>img {
-    width: 50%;
     height: 50%;
-    object-fit: cover;
+    width: 50%;
+    object-fit: scale-down;
+    object-position: center;
 }
 
-nav>ul {
-    justify-content: flex-start;
-}
-
-nav>ul>li {
+.nav-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    margin-bottom: 21px;
+
+    display: grid;
+    gap: 1rem;
+    font-size: 16px;
+    padding-block: 1rem;
+}
+
+.nav-list li {
+    padding: 8px 16px;
+    margin-left: 2rem;
+    border-radius: 100vw 0 0 100vw;
+}
+
+.nav-list li.active {
     background-color: var(--secondary);
-    padding: 3px;
-    border-radius: 7px 0 0 7px;
 }
 
-nav>ul>li:hover {
-    /* background-color: var(--accent); */
+.nav-list a {
     color: var(--secondary);
-    font-weight: bolder;
-}
-
-nav>ul>li>a {
     text-decoration: none;
+}
+
+.nav-list li.active > a {
     color: var(--primary);
+    font-weight: 700;
 }
 
-.search-bar {
-    position: relative;
-
+.account {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    align-self: flex-end;
 }
 
-footer {
+.login-account {
+    margin-left: 2rem;
+}
 
+.login-account a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+header {
+    position: sticky;
+    max-height: 10vh;
+    top: 0;
+}
+
+.search-bar input {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 100vw;
+    border-style: solid;
+    border-color: var(--primary);
+    margin-top: 1rem;
 }
