@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donasi</title>
-  <link href='/test.css' rel='stylesheet'>
+  <link href='/style.css' rel='stylesheet'>
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -80,9 +80,16 @@
             <div class="input-form-row">
                 <span class="input-name">Nama Barang</span>
                 <ul class="input-contain-list">
-                    <li class="input-barang-list">
-                        <div class="input-field-list">
-                            <input type="text" placeholder="Contoh: Perlengkapan Mandi">
+                    <li class="input-barang-column">
+                        <div class="input-barang-row">
+                            <div class="input-field-list">
+                                <input type="text" placeholder="Contoh: Perlengkapan Mandi">
+                            </div>
+                            <div class="value-wrapper">
+                                <div class="minus">-</div>
+                                <div class="num">1</div>
+                                <div class="plus">+</div>
+                            </div>
                         </div>
                         <!-- <input type="image" src="" alt="" placeholder="unggah bukti"> -->
                     </li>
@@ -103,19 +110,6 @@
             </div>
         </form>
     </section>
-    <script>
-        const body = document.querySelector('body'),
-        sidebar = body.querySelector('nav'),
-        toggle = body.querySelector(".toggle"),
-        searchBtn = body.querySelector(".search-box"),
-        modeSwitch = body.querySelector(".toggle-switch"),
-        modeText = body.querySelector(".mode-text");
-        toggle.addEventListener("click" , () =>{
-            sidebar.classList.toggle("close");
-        })
-        searchBtn.addEventListener("click" , () =>{
-            sidebar.classList.remove("close");
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>

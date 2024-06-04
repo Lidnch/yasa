@@ -3,48 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>Buat Acara</title>
   <link href='/style.css' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <nav>
-    <div class="navbar-logo"><img src="assets/yasa-logo-white.png" alt="YASA logo white"></div>
-    <ul class="nav-list">
-      <li>
-        <a href="index.html">Peta</a>
-      </li>
-      <li>
-        <a href="acarasekitar.html">Acara di Sekitar</a>
-      </li>
-      <li>
-        <a href="donasi.html">Berdonasi</a>
-      </li>
-      <li class="active">
-        <a href="buatacara.html" aria-current="page">Buat Acara Baru</a>
-      </li>
-    </ul>
-    <div class="account">
-      <div class="login-account">
-        <a href="akun.html">Masuk</a>
-      </div>
-      <img src="#" alt="profile-picture-placeholder">
-    </div>
-  </nav>
-  <header>
-    <div class="search-bar">
-      <input type="text" placeholder="Cari lingkungan..." />
-    </div>
-  </header>
-  <!-- <main>
-    <section class="map">
-      <img src="#" alt="map-placeholder">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets/yasa-logo-white.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">YASA</span>
+                    <span class="profession">Bantu Sekitar</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Cari acara...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Beranda</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="acarasekitar.html">
+                            <i class='bx bx-map-pin icon' ></i>
+                            <span class="text nav-text">Acara Sekitar</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="donasi.html">
+                            <i class='bx bx-donate-heart icon' ></i>
+                            <span class="text nav-text">Donasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="buatacara.html">
+                            <i class='bx bx-calendar-event icon' ></i>
+                            <span class="text nav-text">Buat Acara Baru</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="akun.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <form>
+            <h1 class="title">Buat Acara</h1>
+            <br>
+            <h2 class="subtitle">Donasi Uang</h2>
+            <div class="input-form-row">
+                <span class="input-name">Nominal</span>
+                <div class="input-contain">
+                    <input type="number" name="" id="" placeholder="Contoh: 200000">
+                </div>
+            </div>
+            <br>
+            <h2 class="subtitle">Donasi Barang</h2>
+            <div class="input-form-row">
+                <span class="input-name">Nama Barang</span>
+                <ul class="input-contain-list">
+                    <li class="input-barang-column">
+                        <div class="input-barang-row">
+                            <div class="input-field-list">
+                                <input type="text" placeholder="Contoh: Perlengkapan Mandi">
+                            </div>
+                            <div class="value-wrapper">
+                                <div class="minus">-</div>
+                                <div class="num">1</div>
+                                <div class="plus">+</div>
+                            </div>
+                        </div>
+                        <!-- <input type="image" src="" alt="" placeholder="unggah bukti"> -->
+                    </li>
+                    
+                </ul>
+            </div>
+            <br>
+            <div class="input-form-row">
+                <span class="input-name">Pesan</span>
+                <div class="input-contain">
+                    <input type="text" placeholder="Contoh: Semoga membawa berkat...">
+                </div>
+            </div>
+            <br>
+            <div class="btn-container-row">
+                <input type="submit" value="Unggah">
+                <input type="reset" value="Batal">
+            </div>
+        </form>
     </section>
-  </main>
-  <footer>
-
-  </footer> -->
+    <script src="main.js"></script>
 </body>
 </html>
