@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>Test Field</title>
   <link href='/test.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -15,11 +14,11 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <!--<img src="logo.png" alt="">-->
+                    <img src="assets/yasa-logo-white.png" alt="">
                 </span>
                 <div class="text logo-text">
-                    <span class="name">Codinglab</span>
-                    <span class="profession">Web developer</span>
+                    <span class="name">YASA</span>
+                    <span class="profession">Bantu Sekitar</span>
                 </div>
             </div>
             <i class='bx bx-chevron-right toggle'></i>
@@ -39,19 +38,19 @@
                     </li>
                     <li class="nav-link">
                         <a href="acarasekitar.html">
-                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <i class='bx bx-map-pin icon' ></i>
                             <span class="text nav-text">Acara Sekitar</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="donasi.html">
-                            <i class='bx bx-bell icon'></i>
+                            <i class='bx bx-donate-heart icon' ></i>
                             <span class="text nav-text">Donasi</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="buatacara.html">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <i class='bx bx-calendar-event icon' ></i>
                             <span class="text nav-text">Buat Acara Baru</span>
                         </a>
                     </li>
@@ -64,7 +63,7 @@
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
-                <li class="mode">
+                <!-- <li class="mode">
                     <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
@@ -73,7 +72,7 @@
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
-                </li>
+                </li> -->
                 
             </div>
         </div>
@@ -93,17 +92,17 @@ toggle.addEventListener("click" , () =>{
 })
 searchBtn.addEventListener("click" , () =>{
     sidebar.classList.remove("close");
-})
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Light mode";
-    }else{
-        modeText.innerText = "Dark mode";
-        
-    }
 });
+// modeSwitch.addEventListener("click" , () =>{
+//     body.classList.toggle("dark");
+    
+//     if(body.classList.contains("dark")){
+//         modeText.innerText = "Light mode";
+//     }else{
+//         modeText.innerText = "Dark mode";
+        
+//     }
+// });
     </script>
 </body>
 </html>

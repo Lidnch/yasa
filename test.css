@@ -332,18 +332,63 @@ body.dark .mode .sun-moon i.moon{
     flex-direction: row;
 }
 
-.home .input-form-row .input-contain-list {
+.input-contain-list {
     display: flex;
     flex-direction: column;
     margin-left: 21px;
 }
 
-.home .input-form-row .input-contain-list .input-barang-list {
+.input-barang-column {
     display: flex;
     flex-direction: column;
 }
 
-.home .input-form-row .input-contain-list .input-barang-list .input-field-list {
+.input-barang-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.value-wrapper {
+    height: 100%;
+    min-width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 21px;
+    border: var(--accent) solid; */
+    /* padding: 7px 14px; */
+}
+
+.value-wrapper div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .value-wrapper div.num {
+    border-left: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
+} */
+
+.value-wrapper div.minus {
+    background-color: var(--accent);
+    border-radius: 21px 0 0 21px;
+    color: var(--secondary);
+}
+
+.value-wrapper div.plus {
+    background-color: var(--primary);
+    border-radius: 0 21px 21px 0;
+    color: var(--secondary);
+}
+
+.input-field-list {
     border-radius: 21px;
     background-color: var(--secondary);
     cursor: pointer;
