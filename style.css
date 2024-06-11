@@ -34,6 +34,7 @@ body{
 
 /* ===== Sidebar ===== */
  .sidebar{
+    z-index: 1000000;
     position: fixed;
     top: 0;
     left: 0;
@@ -214,42 +215,51 @@ header .image-text .profession{
 }
 
 .sidebar.close ~ .home{
-    left: 78px;
+    /* left: 78px; */
     height: 100vh;
-    width: calc(100% - 78px);
+    /* width: calc(100% - 78px); */
 }
 
 .home{
-    position: absolute;
+    position: fixed;
     top: 0;
     top: 0;
-    left: 250px;
+    /* left: 250px; */
+    left: 0;
     height: 100vh;
-    width: calc(100% - 250px);
+    /* width: calc(100% - 250px); */
+    width: 100vw;
     background-color: var(--secondary);
     transition: var(--tran-05);
 }
 
+.home-map {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
 #map {
     height: 100%;
-    width: 100%;
+    width: 100vw;
 }
 
 .home .main-content {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: 50% 50%;
+    left: 0;
 }
 
 .home .main-content form, aside{
-    left: 0;
+    /* left: 0; */
 }
 
 .home .title{
     font-size: 27.5px;
     font-weight: bold;
     color: var(--primary);
-    padding: 70px 0 0 70px;
+    padding: 70px 0 0 148px;
 }
 
 .home .subtitle {
