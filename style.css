@@ -375,3 +375,43 @@ header .image-text .profession{
     background-color: var(--accent);
     border-radius: 21px;
 }
+
+.detail-acara {
+    font-size: 17px;
+    color: var(--text-color);
+}
+
+.detail-acara-content {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.detail-acara-content > .judul-acara{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.detail-acara-content > .area, .penyelengara, .list-detail {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 0;
+}
+
+.detail-acara-content > .title-detail {
+    font-weight: bold;
+}
+
+.detail-acara-content > .area {
+    color: var(--primary);
+}
+
+.list-detail {
+    
+}
+
+.list-detail>.title-detail {
+    color: var(--primary);
+    font-size: 17px;
+}
