@@ -213,6 +213,12 @@ header .image-text .profession{
     display: none;
 }
 
+.sidebar.close ~ .home{
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
 .home{
     position: absolute;
     top: 0;
@@ -223,22 +229,32 @@ header .image-text .profession{
     background-color: var(--secondary);
     transition: var(--tran-05);
 }
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.home .main-content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 50% 50%;
+}
+
+.home .main-content form, aside{
+    left: 0;
+}
+
 .home .title{
-    font-size: 30px;
+    font-size: 27.5px;
     font-weight: bold;
     color: var(--primary);
     padding: 70px 0 0 70px;
 }
 
 .home .subtitle {
-    font-size: ;
-    padding: 0 0 14px 70px;
-}
-
-.sidebar.close ~ .home{
-    left: 78px;
-    height: 100vh;
-    width: calc(100% - 78px);
+    font-size: 17px;
+    padding: 0 0 14px 0;
 }
 
 .home .input-form-row .input-name {
@@ -246,9 +262,12 @@ header .image-text .profession{
 }
 
 .home .input-form-row {
-    margin-left: 70px;
     display: flex;
     flex-direction: row;
+}
+
+.home .input-name {
+    color: var(--text-color);
 }
 
 .input-contain-list {
@@ -263,8 +282,9 @@ header .image-text .profession{
 }
 
 .input-barang-row {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
 }
 
@@ -274,9 +294,6 @@ header .image-text .profession{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 21px;
-    border: var(--accent) solid; */
-    /* padding: 7px 14px; */
 }
 
 .value-wrapper div {
@@ -313,13 +330,9 @@ header .image-text .profession{
     margin-left: 21px;
 }
 
-.home .btn-container-row {
-    margin-left: 70px;
-}
-
 .home input[type=text], input[type=number] {
     max-height: 150%;
-    max-width: 250%;
+    min-width: 100%;
     padding: 7px 14px;
     border: var(--primary) solid;
     background-color: var(--secondary);
@@ -351,3 +364,4 @@ header .image-text .profession{
     color: var(--secondary);
     background-color: var(--accent);
     border-radius: 21px;
+}
