@@ -69,7 +69,7 @@
         <section class="main-content">
             <form>
                 <h2 class="subtitle">Donasi Uang</h2>
-                <div class="input-form-row">
+                <div class="input-form-row"> 
                     <label for="nominal">Nominal</label>
                     <div class="input-contain">
                         <input type="number" name="nominal" id="nominal" placeholder="Contoh: 200000">
@@ -80,18 +80,21 @@
                 <div class="input-form-row">
                     <label for="barang">Nama Barang</label>
                     <ul class="input-contain-list">
-                        <li class="input-barang-column">
+                        <li id="input-barang-column">
                             <div class="input-barang-row">
                                 <div class="input-field-list">
-                                    <input type="text" name="barang" id="barang" placeholder="Contoh: Perlengkapan Mandi">
+                                    <input type="text" name="barang" id="nama-barang" placeholder="Contoh: Perlengkapan Mandi">
                                 </div>
                                 <div class="value-wrapper">
-                                    <div class="minus">-</div>
+                                    <div id="minus-operator">-</div>
                                     <div class="num">1</div>
-                                    <div class="plus">+</div>
+                                    <div id="plus-operator">+</div>
+                                </div>
+                                <div id="delete-button">
+                                    <i class='bx bx-trash'></i>
                                 </div>
                             </div>
-                            <input type="button" value="Tambah Barang">
+                            <button id="btn-tambah-records">Tambah Barang</button>
                             <!-- <input type="image" src="" alt="" placeholder="unggah bukti"> -->
                         </li>
                         
@@ -163,5 +166,7 @@
         </section> 
     </section>
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="clone-record.js"></script>
 </body>
 </html>

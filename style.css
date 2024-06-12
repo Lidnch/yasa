@@ -217,7 +217,7 @@ header .image-text .profession{
 .sidebar.close ~ .home{
     /* left: 78px; */
     height: 100vh;
-    /* width: calc(100% - 78px); */
+    width: calc(100% - 78px);
 }
 
 .home{
@@ -235,8 +235,7 @@ header .image-text .profession{
 }
 
 .map {
-    position: absolute;
-    z-index: -100;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -256,8 +255,8 @@ header .image-text .profession{
     left: 0;
 }
 
-.home .main-content form, aside{
-    /* left: 0; */
+.home .main-content aside{
+    margin-bottom: 70px;
 }
 
 .home .title{
@@ -306,34 +305,33 @@ header .image-text .profession{
 }
 
 .value-wrapper {
-    height: 100%;
-    min-width: 140px;
+    height: 70%;
+    min-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--primary);
+    border-radius: 21px;
 }
 
 .value-wrapper div {
     width: 100%;
-    height: 100%;
     text-align: center;
     font-size: 17px;
     font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.value-wrapper div.minus {
-    background-color: var(--accent);
-    border-radius: 21px 0 0 21px;
     color: var(--secondary);
 }
 
-.value-wrapper div.plus {
-    background-color: var(--primary);
-    border-radius: 0 21px 21px 0;
-    color: var(--secondary);
+#minus-perator {
+    border-left: var(--primary) solid;
+    border-width: 1px;
+}
+
+#delete-button:hover {
+    color: var(--accent);
 }
 
 .input-field-list {
@@ -359,7 +357,7 @@ header .image-text .profession{
     font-weight: 500;
 }
 
-.home input[type=button]{
+.home #btn-tambah-records{
     max-height: 150%;
     min-width: 100%;
     padding: 7px 14px;
@@ -504,4 +502,5 @@ header .image-text .profession{
     flex-direction: column;
     gap: 2em;
     left: 0;
+    padding-bottom: 70px;
 }

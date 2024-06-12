@@ -12,9 +12,9 @@ const body = document.querySelector('body'),
         });
 
 
-const plus = document.querySelector(".plus"),
+const plus = document.querySelector("#plus-operator"),
 num = document.querySelector(".num"),
-minus = document.querySelector(".minus");
+minus = document.querySelector("#minus-operator");
 
 let a = 1;
 
@@ -25,7 +25,7 @@ plus.addEventListener("click", ()=>{
 })
 
 minus.addEventListener("click", ()=>{
-    if(a > 0){
+    if(a > 1){
         a--;
     }
     num.innerHTML = a;
