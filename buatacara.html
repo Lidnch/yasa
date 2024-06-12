@@ -65,50 +65,51 @@
         </div>
     </nav>
     <section class="home">
-        <form>
-            <h1 class="title">Buat Acara</h1>
-            <br>
-            <h2 class="subtitle">Donasi Uang</h2>
-            <div class="input-form-row">
-                <span class="input-name">Nominal</span>
-                <div class="input-contain">
-                    <input type="number" name="" id="" placeholder="Contoh: 200000">
+        <h1 class="title">Buat Acara</title>
+        <section class="main-content">
+            <form>
+                <div class="input-form-row">
+                    <label for="nama-kegiatan">Nama Kegiatan</label>
+                    <div class="input-contain">
+                        <input type="text" name="kegiatan" id="nama-kegiatan" placeholder="Contoh: Kerja Bakti Perbaikan ...">
+                    </div>
                 </div>
-            </div>
-            <br>
-            <h2 class="subtitle">Donasi Barang</h2>
-            <div class="input-form-row">
-                <span class="input-name">Nama Barang</span>
-                <ul class="input-contain-list">
-                    <li class="input-barang-column">
-                        <div class="input-barang-row">
-                            <div class="input-field-list">
-                                <input type="text" placeholder="Contoh: Perlengkapan Mandi">
-                            </div>
-                            <div class="value-wrapper">
-                                <div class="minus">-</div>
-                                <div class="num">1</div>
-                                <div class="plus">+</div>
-                            </div>
-                        </div>
-                        <!-- <input type="image" src="" alt="" placeholder="unggah bukti"> -->
-                    </li>
-                    
-                </ul>
-            </div>
-            <br>
-            <div class="input-form-row">
-                <span class="input-name">Pesan</span>
-                <div class="input-contain">
-                    <input type="text" placeholder="Contoh: Semoga membawa berkat...">
+                <br>
+                <div class="input-form-row">
+                    <label for="waktu-mulai">Mulai</label>
+                    <div class="input-contain">
+                        <input type="datetime-local" name="mulai" id="waktu-mulai" placeholder="dd/mm/yyyy hh:mm">
+                    </div>
                 </div>
-            </div>
-            <br>
-            <div class="btn-container-row">
-                <input type="submit" value="Unggah">
-                <input type="reset" value="Batal">
-            </div>
-        </form>
+                <br>
+                <div class="input-form-row">
+                    <label for="waktu-selesai">Selesai</label>
+                    <div class="input-contain">
+                        <input type="datetime-local" name="selesai" id="waktu-selesai" placeholder="dd/mm/yyyy hh:mm">
+                    </div>
+                </div>
+                <br>
+                <div class="input-form-row">
+                    <label for="deskripsi-kegiatan">Deskripsi Kegiatan</label>
+                    <div class="input-contain">
+                        <input type="text" name="deskripsi" id="deskripsi-kegiatan" placeholder="Contoh: Acara ini akan berkegiatan ...">
+                    </div>
+                </div>
+                <br>
+                <div class="input-form-row">
+                    <label for="nama-penyelenggara">Penyelenggara</label>
+                    <div class="input-contain">
+                        <input type="text" name="penyelenggara" id="nama-penyelenggara" placeholder="Contoh: Budi">
+                        <input type="button" id="tambah-anggota" value="Tambah Anggota">
+                    </div>
+                </div>
+                <br>
+                <div class="btn-container-row">
+                    <input type="submit" value="Buat">
+                    <input type="reset" value="Batal">
+                </div>
+            </form>
+        </section> 
     </section>
     <script src="main.js"></script>
 </body>
