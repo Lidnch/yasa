@@ -1,3 +1,10 @@
+/* Apply a more intuitive box-sizing model globally */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -14,7 +21,6 @@ body, html {
     align-items: center;
     height: 100%;
     padding: 0 50px;
-    box-sizing: border-box;
 }
 
 .registration-form {
@@ -22,11 +28,13 @@ body, html {
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
 }
 
 .logo {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     margin-bottom: 20px;
     margin-top: 25px;
@@ -60,7 +68,9 @@ body, html {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
+    transition: background-color 0.3s;
 }
 
 .registration-form button:hover {
@@ -69,6 +79,7 @@ body, html {
 
 .registration-form p {
     margin-top: 10px;
+    color: black;
 }
 
 .registration-form a {
@@ -83,4 +94,17 @@ body, html {
 .welcome-message {
     color: white;
     font-size: 2em;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .welcome-message {
+        margin-bottom: 20px;
+    }
 }
