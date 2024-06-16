@@ -260,15 +260,16 @@ header .image-text .profession{
 }
 
 .home .title{
-    font-size: 27.5px;
+    font-size: 4rem;
     font-weight: bold;
     color: var(--primary);
     /* padding: 70px 0 0 148px; */
 }
 
 .home .subtitle {
-    font-size: 17px;
+    font-size: 3rem;
     padding: 0 0 14px 0;
+    color: var(--primary);
 }
 
 .home .input-form-row {
@@ -503,4 +504,47 @@ header .image-text .profession{
     gap: 2em;
     left: 0;
     padding-bottom: 70px;
+}
+
+#kotak-berhasil {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#ic-kotak {
+    font-size: 4rem;
+    color: inherit;
+}
+
+#isi-kotak {
+    color: inherit;
+}
+
+#title-kotak {
+    color: inherit;
+}
+
+#konfirmasi-barang {
+    font-size: 1rem;
+    display: grid;
+    grid-column-end: 2;
+}
+
+.konf-don-uang {
+
+}
+
+#kotak-gagal {
+    background-color: var(--accent);
+    color: var(--secondary);
+    padding: 1rem;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
