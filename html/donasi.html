@@ -13,7 +13,7 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="assets/yasa-logo-white.png" alt="">
+                    <img src="../assets/yasa-logo-white.png" alt="">
                 </span>
                 <div class="text logo-text">
                     <span class="name">YASA</span>
@@ -66,9 +66,9 @@
         </div>
     </nav>
     <section class="home">
-        <h1 class="title">Donasi</title>
+        <h1 class="title">Donasi</h1>
         <section class="main-content">
-            <form>
+            <form id="donasi-form">
                 <h2 class="subtitle">Donasi Uang</h2>
                 <div class="input-form-row"> 
                     <label for="nominal">Nominal</label>
@@ -80,22 +80,22 @@
                 <h2 class="subtitle">Donasi Barang</h2>
                 <div class="input-form-row">
                     <label for="barang">Nama Barang</label>
-                    <ul class="input-contain-list">
-                        <li id="input-barang-column">
+                    <ul class="input-contain-list" id="input-list">
+                        <li class="input-barang-item">
                             <div class="input-barang-row">
                                 <div class="input-field-list">
-                                    <input type="text" name="barang" id="nama-barang" placeholder="Contoh: Perlengkapan Mandi">
+                                    <input type="text" name="barang" class="nama-barang" placeholder="Contoh: Perlengkapan Mandi">
                                 </div>
                                 <div class="value-wrapper">
                                     <div id="minus-operator">-</div>
                                     <div class="num">1</div>
                                     <div id="plus-operator">+</div>
                                 </div>
-                                <div id="delete-button">
+                                <div class="delete-button">
                                     <i class='bx bx-trash'></i>
                                 </div>
                             </div>
-                            <button id="btn-tambah-records">Tambah Barang</button>
+                            <button type="button" id="btn-tambah-records">Tambah Barang</button>
                             <!-- <input type="image" src="" alt="" placeholder="unggah bukti"> -->
                         </li>
                         
@@ -118,7 +118,7 @@
                 <h2 class="subtitle">Detail Acara</h2>
                 <div class="detail-acara">
                     <div class="detail-acara-img">
-                        <img src="assets/images/Ilustrasi-permukiman-kumuh.jpg" alt="Dpnasi Sandang dan Pangan ke Kampung Bulak Sunter">
+                        <img src="../assets/images/Ilustrasi-permukiman-kumuh.jpg" alt="Donasi Sandang dan Pangan ke Kampung Bulak Sunter">
                     </div>
                     <div class="detail-acara-content">
                         <span class="judul-acara">Donasi Sandang dan Pangan ke Kampung Bulak Sunter</span>
@@ -167,7 +167,8 @@
         </section> 
     </section>
     <script src="../js/main.js"></script>
+    <script src="../js/form.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="../js/clone-record.js"></script>
+    <script src="../js/donasi-form.js"></script>
 </body>
 </html>
