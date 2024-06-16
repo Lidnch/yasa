@@ -1,3 +1,10 @@
+/* Apply a more intuitive box-sizing model globally */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -9,16 +16,16 @@ body, html {
 
 .container {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
     padding: 0 50px;
-    box-sizing: border-box;
 }
 
 .welcome-message {
     color: black;
     font-size: 2em;
+    text-align: center;
 }
 
 .login-form {
@@ -26,13 +33,14 @@ body, html {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 500px;
-    height: 750px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .logo {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     margin-bottom: 20px;
     margin-top: 100px;
 }
@@ -40,6 +48,7 @@ body, html {
 .login-form form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .login-form input {
@@ -47,7 +56,8 @@ body, html {
     padding: 10px;
     border: none;
     border-radius: 30px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .login-form button {
@@ -57,7 +67,9 @@ body, html {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
+    transition: background-color 0.3s;
 }
 
 .login-form button:hover {
@@ -66,6 +78,7 @@ body, html {
 
 .login-form p {
     margin-top: 10px;
+    color: white;
 }
 
 .login-form a {
@@ -75,4 +88,16 @@ body, html {
 
 .login-form a:hover {
     text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .welcome-message {
+        margin-bottom: 20px;
+    }
 }
