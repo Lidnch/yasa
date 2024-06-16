@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script>
+        function validateForm() {
+            var username = document.forms["loginForm"]["username"].value;
+            var password = document.forms["loginForm"]["password"].value;
+            
+            if (username === "") {
+                alert("Username must be filled out");
+                return false;
+            }
+            
+            if (password === "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <p>Selamat Datang!</p>
+        </div>
+        <div class="login-form">
+            <img src="../assets/yasa-logo-white.png" alt="Logo YASA" class="logo">
+            <form name="loginForm" onsubmit="return validateForm()">
+                <div>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <br>
+                    <button type="submit">Log In</button>
+                </div>
+                <p>Belum Memiliki Akun? <a href="registrasi.html">Registrasi</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

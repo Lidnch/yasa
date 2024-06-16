@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donasi</title>
+  <link href='../css/donasi.css' rel='stylesheet'>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets/yasa-logo-white.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">YASA</span>
+                    <span class="profession">Bantu Sekitar</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Cari acara...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Beranda</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="acarasekitar.html">
+                            <i class='bx bx-map-pin icon' ></i>
+                            <span class="text nav-text">Acara Sekitar</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="donasi.html">
+                            <i class='bx bx-donate-heart icon' ></i>
+                            <span class="text nav-text">Donasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="buatacara.html">
+                            <i class='bx bx-calendar-event icon' ></i>
+                            <span class="text nav-text">Buat Acara Baru</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="akun.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <h1 class="title">Donasi</title>
+        <section class="main-content">
+            <form>
+                <h2 class="subtitle">Donasi Uang</h2>
+                <div class="input-form-row"> 
+                    <label for="nominal">Nominal</label>
+                    <div class="input-contain">
+                        <input type="number" name="nominal" id="nominal" placeholder="Contoh: 200000">
+                    </div>
+                </div>
+                <br>
+                <h2 class="subtitle">Donasi Barang</h2>
+                <div class="input-form-row">
+                    <label for="barang">Nama Barang</label>
+                    <ul class="input-contain-list">
+                        <li id="input-barang-column">
+                            <div class="input-barang-row">
+                                <div class="input-field-list">
+                                    <input type="text" name="barang" id="nama-barang" placeholder="Contoh: Perlengkapan Mandi">
+                                </div>
+                                <div class="value-wrapper">
+                                    <div id="minus-operator">-</div>
+                                    <div class="num">1</div>
+                                    <div id="plus-operator">+</div>
+                                </div>
+                                <div id="delete-button">
+                                    <i class='bx bx-trash'></i>
+                                </div>
+                            </div>
+                            <button id="btn-tambah-records">Tambah Barang</button>
+                            <!-- <input type="image" src="" alt="" placeholder="unggah bukti"> -->
+                        </li>
+                        
+                    </ul>
+                </div>
+                <br>
+                <div class="input-form-row">
+                    <label for="pesan">Pesan</label>
+                    <div class="input-contain">
+                        <input type="text" name="pesan" id="pesan" placeholder="Contoh: Semoga membawa berkat...">
+                    </div>
+                </div>
+                <br>
+                <div class="btn-container-row">
+                    <input type="submit" value="Unggah">
+                    <input type="reset" value="Batal">
+                </div>
+            </form>
+            <aside>
+                <h2 class="subtitle">Detail Acara</h2>
+                <div class="detail-acara">
+                    <div class="detail-acara-img">
+                        <img src="assets/images/Ilustrasi-permukiman-kumuh.jpg" alt="Dpnasi Sandang dan Pangan ke Kampung Bulak Sunter">
+                    </div>
+                    <div class="detail-acara-content">
+                        <span class="judul-acara">Donasi Sandang dan Pangan ke Kampung Bulak Sunter</span>
+                        <span class="area">Kampung Bulak Sunter</span>
+                        <span class="penyelenggara">Kopeka</span>
+                        <div class="list-detail">
+                            <span class="title-detail">Mulai</span>
+                            <span class="waktu-mulai">Sabtu, 17 Juni 2024 08.00 WIB</span>
+                        </div>
+                        <div class="list-detail">
+                            <span class="title-detail">Selesai</span>
+                            <span class="waktu-selesai">Sabtu, 17 Juni 2024 09.00 WIB</span>
+                        </div>
+                        <div class="list-detail">
+                            <span class="title-detail">Penerima Bantuan</span>
+                            <span class="penerima-bantuan">150 Keluarga</span>
+                        </div>
+                        <div class="list-detail">
+                            <span class="title-detail">Detail Kegiatan</span>
+                            <p class="">Deskripsi Kegiatan: Kegiatan ini merupakan inisiatif sosial yang bertujuan untuk memberikan bantuan berupa sandang dan pangan kepada masyarakat Kampung Bulak Sunter. Selama dua hari, sukarelawan dari Kopeka akan mendistribusikan paket bantuan yang terdiri dari pakaian layak pakai dan bahan makanan pokok. Kegiatan ini juga akan melibatkan interaksi langsung dengan warga setempat untuk memahami kebutuhan mereka lebih dalam.</p>
+                        </div>
+                        <div class="list-detail">
+                            <span class="title-detail">Penyelenggara</span>
+                            <ul>
+                                <li>
+                                    <span class="role">Ketua Pelaksana</span>
+                                    <span class="penanggung-jawab">Satria Budi</span>
+                                </li>
+                                <li>
+                                    <span class="role">Sekretaris</span>
+                                    <span class="penanggung-jawab">Lina Anggraini</span>
+                                </li>
+                                <li>
+                                    <span class="role">Bendahara</span>
+                                    <span class="penanggung-jawab">Rendy Kurniawan</span>
+                                </li>
+                                <li>
+                                    <span class="role">Koordinator Lapangan</span>
+                                    <span class="penanggung-jawab">Jessica Tania</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section> 
+    </section>
+    <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/clone-record.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* Apply a more intuitive box-sizing model globally */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #00bcd4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.registration-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 650px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: black;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.registration-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #00bcd4;
+    border-radius: 30px;
+}
+
+.registration-form button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100px;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #0097a7;
+}
+
+.registration-form p {
+    margin-top: 10px;
+    color: black;
+}
+
+.registration-form a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.registration-form a:hover {
+    text-decoration: underline;
+}
+
+.welcome-message {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .welcome-message {
+        margin-bottom: 20px;
+    }
+}
