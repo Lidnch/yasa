@@ -57,9 +57,9 @@
             </div>
             <div class="bottom-content">
                 <li class="">
-                    <a href="akun.html">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
+                    <a href="login.html">
+                        <i class='bx bxs-user-account icon'></i>
+                        <span class="text nav-text">Login</span>
                     </a>
                 </li>
             </div>
@@ -92,6 +92,23 @@
         </section> 
     </section>
     <script src="../js/main.js"></script>
+    <script src="../js/donasi-form.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+
+        const nominalUang = localStorage.getItem('nominal-uang');
+        const namaBarang = localStorage.getItem('nama-barang');
+        const jumlahBarang = localStorage.getItem('jumlah-barang');
+
+        document.getElementById('nominal-uang').textContent =  nominalUang;
+        document.getElementById('nama-barang').textContent = namaBarang;
+        document.getElementById('jumlah-barang').textContent = jumlahBarang;
+
+        localStorage.clear();
+        localStorage.remove('nominal-uang');
+        localStorage.remove('nama-barang');
+        localStorage.remove('jumlah-barang');
+
+    </script>
 </body>
 </html>
