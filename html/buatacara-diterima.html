@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donasi</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href='../css/donasi.css' rel='stylesheet'>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../assets/yasa-logo-white.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">YASA</span>
+                    <span class="profession">Bantu Sekitar</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Cari acara...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Beranda</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="acarasekitar.html">
+                            <i class='bx bx-map-pin icon' ></i>
+                            <span class="text nav-text">Acara Sekitar</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="active" href="donasi.html">
+                            <i class='bx bx-donate-heart icon' ></i>
+                            <span class="text nav-text">Donasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="buatacara.html">
+                            <i class='bx bx-calendar-event icon' ></i>
+                            <span class="text nav-text">Buat Acara Baru</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="login.html">
+                        <i class='bx bxs-user-account icon'></i>
+                        <span class="text nav-text">Login</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <div id="kotak-berhasil">
+            <div id="ic-kotak">
+                <i class='bx bxs-check-circle'></i>
+            </div>
+            <div id="isi-kotak">
+                <h1 id="title-kotak">Acara Anda Lolos Verifikasi</h1>
+                <span id="deskripsi-kotak">
+                    Semangat berbuat kasih dengan sesama manusia!
+                </span>
+            </div>
+        </div>
+        <section id="konfirmasi-barang">
+            <h2 class="subtitle">Detail Acara</h2>
+            <div class="konf-don-uang">
+                <h3 class="konf-label">Nama Kegiatan</h3>
+                <span id="nama-kegiatan"></span>
+                <h3 class="konf-label">Mulai</h3>
+                <span id="waktu-mulai"></span>
+                <h3 class="konf-label">Selesai</h3>
+                <span id="waktu-selesai"></span>
+                <h3 class="konf-label">Deskripsi Kegiatan</h3>
+                <span id="deskripsi-kegiatan"></span>
+                <h3 class="konf-label">Penyelenggara</h3>
+                <div>
+                    <ul>
+                        <li><span id="role-penyelenggara"></span>: <span id="nama-penyelenggara"></span></li>
+                        <!-- <li>Sepatu Sekolah Remaja x 12 pasang</li> -->
+                    </ul>
+                </div>
+        </section> 
+    </section>
+    <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+
+        const nominalUang = localStorage.getItem('nominal-uang');
+        const namaBarang = localStorage.getItem('nama-barang');
+        const jumlahBarang = localStorage.getItem('jumlah-barang');
+
+        document.getElementById('nominal-uang').textContent =  nominalUang;
+        document.getElementById('nama-barang').textContent = namaBarang;
+        document.getElementById('jumlah-barang').textContent = jumlahBarang;
+
+        localStorage.clear();
+        localStorage.remove('nominal-uang');
+        localStorage.remove('nama-barang');
+        localStorage.remove('jumlah-barang');
+
+    </script>
+</body>
+</html>

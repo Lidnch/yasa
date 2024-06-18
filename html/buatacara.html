@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buat Acara</title>
   <link href='../css/style.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../css/buatacara.css">
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -67,55 +68,140 @@
     <section class="home">
         <h1 class="title">Buat Acara</title>
         <section class="main-content">
-            <form>
-                <div class="input-form-row">
-                    <label for="nama-kegiatan">Nama Kegiatan</label>
-                    <div class="input-contain">
-                        <input type="text" name="kegiatan" id="nama-kegiatan" placeholder="Contoh: Kerja Bakti Perbaikan ...">
-                    </div>
-                </div>
-                <br>
-                <div class="input-form-row">
-                    <label for="waktu-mulai">Mulai</label>
-                    <div class="input-contain">
-                        <input type="datetime-local" name="mulai" id="waktu-mulai" placeholder="dd/mm/yyyy hh:mm">
-                    </div>
-                </div>
-                <br>
-                <div class="input-form-row">
-                    <label for="waktu-selesai">Selesai</label>
-                    <div class="input-contain">
-                        <input type="datetime-local" name="selesai" id="waktu-selesai" placeholder="dd/mm/yyyy hh:mm">
-                    </div>
-                </div>
-                <br>
-                <div class="input-form-row">
-                    <label for="deskripsi-kegiatan">Deskripsi Kegiatan</label>
-                    <div class="input-contain">
-                        <input type="text" name="deskripsi" id="deskripsi-kegiatan" placeholder="Contoh: Acara ini akan berkegiatan ...">
-                    </div>
-                </div>
-                <br>
-                <div class="input-form-row">
-                    <label for="nama-penyelenggara">Penyelenggara</label>
-                    <div class="input-contain">
-                        <div>
-                            <input type="text" name="penyelenggara" id="nama-penyelenggara" placeholder="Contoh: Budi">
-                        </div>
-                        <div id="delete-button">
-                            <i class='bx bx-trash'></i>
-                        </div>
-                        <button id="btn-tambah-records">Tambah Anggota</button>
-                    </div>
-                </div>
-                <br>
+            <form id="buat-acara-form">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="nama-kegiatan">Nama Kegiatan</label>
+                        </td>
+                        <td>
+                            <input type="text" name="kegiatan" id="nama-kegiatan" placeholder="Contoh: Kerja Bakti Perbaikan ...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="waktu-mulai">Mulai</label>
+                        </td>
+                        <td>
+                            <input type="datetime-local" name="mulai" id="waktu-mulai" placeholder="dd/mm/yyyy hh:mm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="waktu-selesai">Selesai</label>
+                        </td>
+                        <td>
+                            <input type="datetime-local" name="selesai" id="waktu-selesai" placeholder="dd/mm/yyyy hh:mm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="deskripsi-kegiatan">Deskripsi Kegiatan</label>
+                        </td>
+                        <td>
+                            <input type="text" name="deskripsi" id="deskripsi-kegiatan" placeholder="Contoh: Acara ini akan berkegiatan ...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nama-penyelenggara">Penyelenggara</label>
+                        </td>
+                        <td>
+                            <div class="penyelengara">
+                                <input type="text" name="role-penyelenggara" id="role-penyelenggara" placeholder="Contoh: Ketua">
+                                <input type="text" name="nama-penyelenggara" id="nama-penyelenggara" placeholder="Contoh: Budi">
+                            </div>
+                        </td>
+                        <td>
+                            <div id="delete-button">
+                                <i class='bx bx-trash'></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" id="btn-tambah-agt">Tambah Anggota</button>
+                        </td>
+                    </tr>
+                </table>
                 <div class="btn-container-row">
                     <input type="submit" value="Buat">
                     <input type="reset" value="Batal">
                 </div>
             </form>
+            <aside>
+                <h2 class="subtitle">Detail Area</h2>
+                <div class="detail-area">
+                    <div class="detail-area-img">
+                        <img src="../assets/images/Ilustrasi-permukiman-kumuh.jpg" alt="Donasi Sandang dan Pangan ke Kampung Bulak Sunter">
+                    </div>
+                    <div class="detail-area-content">
+                        <span class="area">Kampung Bulak Sunter</span>
+                        <span class="alamat">Kel. Marga Mulya, Kec. Bekasi Utara, Kota Bekasi, Jawa Barat</span>
+                        <span class="alamat">17124</span>
+                        <div class="list-detail">
+                            <span class="title-detail">Luas Area</span>
+                            <span class="waktu-mulai">0.04 km²</span>
+                        </div>
+                        <div class="list-detail">
+                            <span class="title-detail">Jumlah Penduduk</span>
+                            <span class="waktu-selesai">192 penduduk (67 anak)</span>
+                        </div>
+                        <div class="list-detail">
+                            <span class="title-detail">Kepadatan Area</span>
+                            <span class="penerima-bantuan">4800 penduduk/km²</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </section> 
     </section>
     <script src="../js/main.js"></script>
+    <script>
+        const buatacaraForm = document.getElementById('buat-acara-form'),
+            namaKegiatan = document.getElementById('nama-kegiatan'),
+            waktuMulai = document.getElementById('waktu-mulai'),
+            waktuSelesai = document.getElementById('waktu-selesai'),
+            deskripsiKegiatan = document.getElementById('deskripsi-kegiatan'),
+            rolePenyelenggara = document.getElementById('role-penyelenggara'),
+            namaPenyelenggara = document.getElementById('nama-penyelenggara');
+        
+        buatacaraForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const namaKegiatanValue = namaKegiatan.value;
+        const waktuMulaiValue = waktuMulai.value;
+        const waktuSelesaiValue = waktuSelesai.value;
+        const deskripsiKegiatanValue = deskripsiKegiatan.value;
+        const rolePenyelenggaraValue = rolePenyelenggara.value;
+        const namaPenyelenggaraValue = namaPenyelenggara.value;
+
+        localStorage.setItem('nama-kegiatan', namaKegiatanValue);
+        localStorage.setItem('waktu-mulai', waktuMulaiValue);
+        localStorage.setItem('waktu-selesai', waktuSelesaiValue);
+        localStorage.setItem('deskripsi-kegiatan', deskripsiKegiatanValue);
+        localStorage.setItem('role-penyelenggara', rolePenyelenggaraValue);
+        localStorage.setItem('nama-penyelenggara', namaPenyelenggaraValue);
+
+        // Forbidden items list
+        const forbiddenItems = ['pesta', 'party'];
+
+        // Check for forbidden items in the form
+        const items = namaKegiatan;
+        let hasForbiddenItem = false;
+
+        const value = items.value.toLowerCase();
+            if (forbiddenItems.includes(value)) {
+                hasForbiddenItem = true;
+            }
+
+        if (hasForbiddenItem) {
+            window.location.href = 'buatacara-ditolak.html';
+        } else {
+            window.location.href = 'buatacara-diterima.html';
+        }
+    });
+    </script>
 </body>
 </html>

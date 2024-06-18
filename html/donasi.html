@@ -69,45 +69,59 @@
         <h1 class="title">Donasi</h1>
         <section class="main-content">
             <form id="donasi-form">
-                <h2 class="subtitle">Donasi Uang</h2>
-                <div class="input-form-row"> 
-                    <label for="nominal">Nominal</label>
-                    <div class="input-contain">
-                        <input type="number" name="nominal" id="donasi-nominal-uang" placeholder="Contoh: 200000">
-                    </div>
-                </div>
-                <br>
-                <h2 class="subtitle">Donasi Barang</h2>
-                <div class="input-form-row">
-                    <label for="barang">Nama Barang</label>
-                    <ul class="input-contain-list" id="input-list">
-                        <li class="input-barang-item">
-                            <div class="input-barang-row">
-                                <div class="input-field-list">
-                                    <input type="text" id="donasi-nama-barang" class="nama-barang" placeholder="Contoh: Perlengkapan Mandi">
-                                </div>
-                                <div class="value-wrapper">
-                                    <div id="minus-operator">-</div>
-                                    <div id="donasi-jumlah-barang" class="num">1</div>
-                                    <div id="plus-operator">+</div>
-                                </div>
-                                <div class="delete-button">
-                                    <i class='bx bx-trash'></i>
-                                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <h2 class="subtitle">Donasi Uang</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nominal">Nominal</label>
+                        </td>
+                        <td>
+                            <input type="number" name="nominal" id="donasi-nominal-uang" placeholder="Contoh: 200000">
+                        </td>
+                    <tr>
+                        <td>
+                            <h2 class="subtitle">Donasi Barang</h2>
+                        </td>
+                    </tr>
+                    <tr id="input-barang">
+                        <td>
+                            <label for="barang">Nama Barang</label>
+                        </td>
+                        <td>
+                            <input type="text" id="donasi-nama-barang" class="nama-barang" placeholder="Contoh: Perlengkapan Mandi">
+                        </td>
+                        <td>
+                            <div class="value-wrapper">
+                                <div id="minus-operator">-</div>
+                                <div id="donasi-jumlah-barang" class="num">1</div>
+                                <div id="plus-operator">+</div>
                             </div>
-                            <button type="button" id="btn-tambah-records">Tambah Barang</button>
-                            <!-- <input type="image" src="" alt="" placeholder="unggah bukti"> -->
-                        </li>
-                        
-                    </ul>
-                </div>
-                <br>
-                <div class="input-form-row">
-                    <label for="pesan">Pesan</label>
-                    <div class="input-contain">
-                        <input type="text" name="pesan" id="pesan" placeholder="Contoh: Semoga membawa berkat...">
-                    </div>
-                </div>
+                        </td>
+                        <td>
+                            <div class="delete-button">
+                                <i class='bx bx-trash'></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" id="btn-tambah-brg">Tambah Barang</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pesan">Pesan</label>
+                        </td>
+                        <td>
+                            <input type="text" name="pesan" id="pesan" placeholder="Contoh: Semoga membawa berkat...">
+                        </td>
+                    </tr>
+                </table>
                 <br>
                 <div class="btn-container-row">
                     <input type="submit" value="Unggah">

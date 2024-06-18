@@ -1,0 +1,119 @@
+.home .main-content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 50% 50%;
+    left: 0;
+}
+
+.penyelenggara {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 30% 70%;
+}
+
+#role-penyelenggara {
+    min-width: 0.1rem;
+    border-radius: 2.1rem 0 0 2.1rem;
+}
+
+#nama-penyelenggara {
+    min-width: 1rem;
+    border-radius:  0 2.1rem 2.1rem 0;
+}
+
+#btn-tambah-agt{
+    max-height: 150%;
+    min-width: 100%;
+    padding: 7px 14px;
+    border: var(--primary) solid;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 21px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+label {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.detail-area {
+    font-size: 17px;
+    color: var(--text-color);
+}
+
+.detail-area-img > img {
+    border-radius: 2em;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.detail-area-content {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.detail-area-content > .area{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.detail-area-content > .alamat {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 0;
+    font-weight: 700;
+}
+
+.detail-area-content > .list-detail {
+    grid-template-rows: ;
+}
+
+.detail-area-content > .title-detail {
+    font-weight: bold;
+}
+
+.detail-area-content > .area {
+    color: var(--primary);
+}
+
+.list-detail {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: 25% 75% ;
+    margin-top: 14px;
+}
+
+.list-detail>.title-detail {
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.list-detail > .title-detail > ul, li {
+    list-style-type: none;
+    row-gap: 2px;
+}
+
+.list-detail > ul > li > .role {
+    color: var(--primary);
+}
+
+@media screen and (max-width: 1621px) {
+
+    .home .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    #role-penyelenggara {
+        border-radius: 2.1rem;
+    }
+    
+    #nama-penyelenggara {
+        border-radius: 2.1rem;
+    }
+}
