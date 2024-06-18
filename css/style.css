@@ -203,6 +203,20 @@ header .image-text .profession{
     color: var(--secondary);
 }
 
+.sidebar li a.active {
+    background-color: var(--secondary);
+}
+
+.sidebar li a.active > i {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.sidebar li a.active > span {
+    color: var(--accent);
+    font-weight: 600;
+}
+
 .sidebar .menu-bar{
     height: calc(100% - 55px);
     display: flex;
@@ -260,21 +274,18 @@ header .image-text .profession{
 }
 
 .home .title{
-    font-size: 4rem;
+    font-size: 2.8rem;
     font-weight: bold;
     color: var(--primary);
-    /* padding: 70px 0 0 148px; */
 }
 
 .home .subtitle {
-    font-size: 3rem;
+    font-size: 1.4rem;
     padding: 0 0 14px 0;
-    color: var(--primary);
+    color: var(--text-color);
 }
 
-.home .input-form-row {
-    /* display: block;
-    margin: 10px 0; */
+/* .home .input-form-row {
     display: flex;
     flex-direction: row;
 }
@@ -282,9 +293,6 @@ header .image-text .profession{
 .input-form-row > label {
     color: var(--text-color);
     font-size: 17px;
-    /* display: inline-block;
-    text-align: right;
-    width: 100px; */
 }
 
 .input-contain-list {
@@ -326,8 +334,8 @@ header .image-text .profession{
     color: var(--secondary);
 }
 
-#minus-perator {
-    border-left: var(--primary) solid;
+#minus-operator {
+    border-right: var(--primary) solid;
     border-width: 1px;
 }
 
@@ -398,11 +406,6 @@ header .image-text .profession{
     font-size: 17px;
     color: var(--text-color);
 }
-
-/* .detail-acara-img {
-    object-fit: cover;
-    max-height: 2em;
-} */
 
 .detail-acara-img > img {
     border-radius: 2em;
@@ -504,7 +507,7 @@ header .image-text .profession{
     gap: 2em;
     left: 0;
     padding-bottom: 70px;
-}
+} */
 
 #kotak-berhasil {
     background-color: var(--primary);
@@ -533,10 +536,6 @@ header .image-text .profession{
     font-size: 1rem;
     display: grid;
     grid-column-end: 2;
-}
-
-.konf-don-uang {
-
 }
 
 #kotak-gagal {
