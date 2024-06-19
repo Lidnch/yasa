@@ -73,7 +73,7 @@
             <div id="isi-kotak">
                 <h1 id="title-kotak">Acara Anda Lolos Verifikasi</h1>
                 <span id="deskripsi-kotak">
-                    Semangat berbuat kasih dengan sesama manusia!
+                    Selamat mempersiapkan kegiatan Anda!
                 </span>
             </div>
         </div>
@@ -82,12 +82,16 @@
             <div class="konf-don-uang">
                 <h3 class="konf-label">Nama Kegiatan</h3>
                 <span id="nama-kegiatan"></span>
+                <br>
                 <h3 class="konf-label">Mulai</h3>
                 <span id="waktu-mulai"></span>
+                <br>
                 <h3 class="konf-label">Selesai</h3>
                 <span id="waktu-selesai"></span>
+                <br>
                 <h3 class="konf-label">Deskripsi Kegiatan</h3>
                 <span id="deskripsi-kegiatan"></span>
+                <br>
                 <h3 class="konf-label">Penyelenggara</h3>
                 <div>
                     <ul>
@@ -101,18 +105,27 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
 
-        const nominalUang = localStorage.getItem('nominal-uang');
-        const namaBarang = localStorage.getItem('nama-barang');
-        const jumlahBarang = localStorage.getItem('jumlah-barang');
+        const namaKegiatan = localStorage.getItem('nama-kegiatan');
+        const waktuMulai = localStorage.getItem('waktu-mulai');
+        const waktuSelesai = localStorage.getItem('waktu-selesai');
+        const deskripsiKegiatan = localStorage.getItem('deskripsi-kegiatan');
+        const rolePenyelenggara = localStorage.getItem('role-penyelenggara');
+        const namaPenyelenggara = localStorage.getItem('nama-penyelenggara');
 
-        document.getElementById('nominal-uang').textContent =  nominalUang;
-        document.getElementById('nama-barang').textContent = namaBarang;
-        document.getElementById('jumlah-barang').textContent = jumlahBarang;
+        document.getElementById('nama-kegiatan').textContent =  namaKegiatan;
+        document.getElementById('waktu-mulai').textContent = waktuMulai;
+        document.getElementById('waktu-selesai').textContent = waktuSelesai;
+        document.getElementById('deskripsi-kegiatan').textContent =  deskripsiKegiatan;
+        document.getElementById('role-penyelenggara').textContent = rolePenyelenggara;
+        document.getElementById('nama-penyelenggara').textContent = namaPenyelenggara;
 
         localStorage.clear();
-        localStorage.remove('nominal-uang');
-        localStorage.remove('nama-barang');
-        localStorage.remove('jumlah-barang');
+        localStorage.remove('nama-kegiatan');
+        localStorage.remove('waktu-mulai');
+        localStorage.remove('waktu-selesai');
+        localStorage.remove('deskripsi-kegiatan');
+        localStorage.remove('role-penyelenggara');
+        localStorage.remove('nama-penyelenggara');
 
     </script>
 </body>
