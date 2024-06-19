@@ -26,6 +26,7 @@ var polygon1 = L.polygon([
     [-6.21905, 106.995828],[-6.219023, 106.995917],[-6.219012, 106.995992],
     [-6.219023, 106.996174],[-6.219002, 106.996413]
 ], {color: '#5bc7d2'}).addTo(map);
+var bounds = polygon1.getBounds();
 
 var polygon2 = L.polygon([
     [-6.221973, 107.003416],[-6.220869, 107.00303],[-6.22026, 107.003022],
@@ -41,7 +42,11 @@ var polygon2 = L.polygon([
     [-6.221936, 107.003711]
 ], {color: '#5bc7d2'}).addTo(map)
 
-polygon.on('click', map.fitbounds(bounds))
+// var polygon3 = L.polygon([
+//   [-6.221973, 107.003416]
+// ], {color: '#5bc7d2'}).addTo(map)
+
+polygon1.on('click', map.fitbounds(polygon1.bounds))
 // popups
 // marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 // circle.bindPopup("I am a circle.");
@@ -63,13 +68,34 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-L.control.locate(OPTIONS).addTo(map);
+if(!navigator.geolocation) {
+  console.log("Browser anda tidak mendukung fitur geolocation!")
+} else {
+  setInterval(() => {
+    navigator.geolocation.getCurrentPosition(getUserPosition)
+  }, 5000)
+}
 
-var lc = L.control
-  .locate({
-    position: "topright",
-    strings: {
-      title: "Show me where I am, yo!"
-    }
-  })
-  .addTo(map);
+var userPinpoint, userRadius;
+
+function getUserPosition(position){
+  var lat = position.coords.latitude
+  var long = position.coords.longtitude
+  var accuracy = position.coords.accuracy
+
+  if(userPinpoint) {
+    map.removeLayer(userPinpoint)
+  }
+
+  if(userRadius) {
+    map.removeLayer(userRadius)
+  }
+
+  userPinpoint = L.marker([lat, long])
+  userRadius = L.circle([lat, long], {radius: accuracy})
+
+  var userLocation = L.featureGroup([marker, circle]).addTo(map)
+
+  map.fitBounds(featureGroup.getBounds())
+
+}

@@ -51,24 +51,3 @@ minus.addEventListener("click", ()=>{
 // }
 
 // addBarang.addEventListener("click", addInputBarang)
-
-let rowIndex = 1;
-
-        document.getElementById('btn-tambah-brg').addEventListener('click', function() {
-            rowIndex++;
-            const originalRow = document.getElementById('input-barang');
-            const clonedRow = originalRow.cloneNode(true);
-            
-            clonedRow.id = '';
-            clonedRow.querySelector('.nama-barang').id = `donasi-nama-barang-${rowIndex}`;
-            clonedRow.querySelector('.num').id = `donasi-jumlah-barang-${rowIndex}`;
-            clonedRow.querySelector('minus-operator').id = `minus-operator-${rowIndex}`;
-            clonedRow.querySelector('plus-operator').id = `plus-operator-${rowIndex}`;
-
-            // Set default values or clear input if necessary
-            clonedRow.querySelector('.nama-barang').value = '';
-            clonedRow.querySelector('.num').innerText = '1';
-
-            // Append the cloned row to the table
-            originalRow.parentNode.appendChild(clonedRow);
-        });
